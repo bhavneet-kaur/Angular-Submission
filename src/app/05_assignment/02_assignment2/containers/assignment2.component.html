@@ -1,0 +1,52 @@
+<div class="assignment1">
+  <div class="alert alert-info">Follow the steps:</div>
+  <ul class="list-group">
+    <li class="list-group-item">Observe the collection of todos in component's class</li>
+    <li class="list-group-item">Render the list of todos using &lt;table&gt; tag</li>
+    <li class="list-group-item">Observe the "active" class in component's styles</li>
+    <li class="list-group-item">Apply the "active" class to the row when user clicks on it</li>
+  </ul>
+  <div class="container your-code">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Type</th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr (click)="onSelectRow(data[0])"
+        [ngClass]="{active: data[0]===selectedRow}">
+          <th scope="row">{{data[0]?.id}}</th>
+          <td>{{data[0]?.type}}</td>
+          <td>{{data[0]?.description}}</td>
+          <td>{{data[0]?.completed}}</td>
+        </tr>
+        <tr (click)="onSelectRow(data[1])"
+        [ngClass]="{active: data[1]===selectedRow}">
+          <th scope="row">{{data[1]?.id}}</th>
+          <td>{{data[1]?.type}}</td>
+          <td>{{data[1]?.description}}</td>
+          <td>{{data[1]?.completed}}</td>
+        </tr>
+        <tr (click)="onSelectRow(data[2])"
+        [ngClass]="{active: data[2]===selectedRow}">
+          <th scope="row">{{data[2]?.id}}</th>
+          <td>{{data[2]?.type}}</td>
+          <td>{{data[2]?.description}}</td>
+          <td>{{data[2]?.completed}}</td>
+        </tr>
+        <tr (click)="onSelectRow(data[3])"
+        [ngClass]="{active: data[3]===selectedRow}">
+          <th scope="row">{{data[3]?.id}}</th>
+          <td>{{data[3]?.type}}</td>
+          <td>{{data[3]?.description}}</td>
+          <td>{{data[3]?.completed}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!--h6>Remove this &lt;h3&gt; and create your HTML here</h6>-->
+  </div>
+</div>
